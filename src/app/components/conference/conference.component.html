@@ -1,0 +1,33 @@
+<div *ngIf="!isConfStart">
+    <form [formGroup]="form" (ngSubmit)="submitForm(form)">
+        <input type="text" class="txt" placeholder="enter full name" formControlName="fullName" /><br />
+        <div *ngFor="let validation of validation_messages.fullName" class="error">
+            <ng-container *ngIf="form.get('fullName').hasError(validation.type) 
+                       && (form.get('fullName').dirty || form.get('fullName').touched)">
+                {{validation.message}}</ng-container>
+        </div>
+        <input type="text" class="txt" formControlName="cofname" placeholder="enter conference name" *ngIf="!isGuest">
+        <div *ngFor="let validation of validation_messages.cofname" class="error">
+            <ng-container *ngIf="form.get('cofname').hasError(validation.type) 
+                       && (form.get('cofname').dirty || form.get('cofname').touched)">
+                {{validation.message}}</ng-container>
+        </div>
+        <div class="t-and-c">
+            <label>mic</label>
+            <input type="checkbox" formControlName="mic" value="false" /><br />
+        </div>
+        <div class="t-and-c">
+            <label>camera</label>
+            <input type="checkbox" formControlName="cam" value="false" /><br />
+        </div>
+        <button type="submit">start conference</button>
+    </form>
+</div>
+
+<ng-container *ngIf="!isGuest && isConfStart">
+    <p *ngIf="conflink">Invite Link:  {{conflink}}</p>
+</ng-container>
+
+
+<div id="video-conf" class="room" *ngIf="isConfStart">
+</div>

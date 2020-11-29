@@ -1,0 +1,49 @@
+form {
+    background: #edffd9;
+    padding: 1%;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    margin-left: 23%;
+    margin-top: 35px;
+}
+
+input.txt {
+    width: 96%;
+    padding: 2%;
+    margin: 6px 0px;
+    outline-color: #e8e7e7;
+    border: 1px solid #e2e2e2;
+}
+
+.error {
+    color: #e64c4c;
+    font-size: 12px;
+    font-family: sans-serif,monospace;
+}
+
+.t-and-c {
+    margin: 5px 0px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+button {
+    background: #85b54e;
+    color: #f1f1f1;
+    border: 0px;
+    border-radius: 3px;
+    margin: 3px 0px;
+    padding: 7px;
+    margin-right: 1%;
+    font-size: 16px;
+}
+
+div#video-conf {
+    width: 76%;
+    margin: 27px 11%;
+}
+.v-class {
+    width: 100%;
+}
